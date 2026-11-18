@@ -54,18 +54,9 @@ const galleries = {
       'administration', 'synchronisation', 'roles_permissions', 'sauvegardes',
     ][index]}.png`,
   })),
-  web: screenNames.map((title, index) => ({
-    title,
-    file: `assets/web/${String(index + 1).padStart(2, '0')}_${[
-      'connexion', 'tableau_de_bord', 'operations', 'dons', 'designations',
-      'categories', 'bilans', 'analyse', 'rapports', 'historique', 'parametres',
-      'administration', 'synchronisation', 'roles_permissions', 'sauvegardes',
-    ][index]}.png`,
-  })),
 };
 
 const galleryRoot = document.querySelector('#screen-gallery');
-const tabs = document.querySelectorAll('.gallery-tab');
 const dialog = document.querySelector('#screen-dialog');
 const dialogImage = document.querySelector('#dialog-image');
 const dialogTitle = document.querySelector('#dialog-title');
@@ -94,16 +85,6 @@ function openScreen(type, index) {
   dialogTitle.textContent = screen.title;
   dialogIndex.textContent = `${index + 1} / ${galleries[type].length}`;
   dialog.showModal();
-}
-
-for (const tab of tabs) {
-  tab.addEventListener('click', () => {
-    tabs.forEach((item) => {
-      item.classList.toggle('active', item === tab);
-      item.setAttribute('aria-selected', item === tab ? 'true' : 'false');
-    });
-    renderGallery(tab.dataset.gallery);
-  });
 }
 
 document.querySelector('.dialog-close')?.addEventListener('click', () => dialog?.close());
