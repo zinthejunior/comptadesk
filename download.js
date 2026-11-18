@@ -93,3 +93,44 @@ dialog?.addEventListener('click', (event) => {
 });
 
 renderGallery('desktop');
+
+const contactForm = document.querySelector('#contact-form');
+const contactStatus = document.querySelector('#contact-status');
+
+contactForm?.addEventListener('submit', async (event) => {
+  event.preventDefault();
+
+  const submitButton = contactForm.querySelector('button[type="submit"]');
+  const submitLabel = submitButton?.querySelector('span');
+
+  if (submitButton instanceof HTMLButtonElement) submitButton.disabled = true;
+  if (submitLabel) submitLabel.textContent = 'Envoi en cours...';
+  if (contactStatus) {
+    contactStatus.textContent = '';
+    contactStatus.className = '';
+  }
+
+  try {
+    const response = await fetch(contactForm.action, {
+      method: 'POST',
+      headers: { Accept: 'application/json' },
+      body: new FormData(contactForm),
+    });
+
+    if (!response.ok) throw new Error('Échec de l’envoi');
+
+    contactForm.reset();
+    if (contactStatus) {
+      contactStatus.textContent = 'Votre message a bien été envoyé.';
+      contactStatus.className = 'success';
+    }
+  } catch {
+    if (contactStatus) {
+      contactStatus.textContent = 'Impossible d’envoyer le message pour le moment.';
+      contactStatus.className = 'error';
+    }
+  } finally {
+    if (submitButton instanceof HTMLButtonElement) submitButton.disabled = false;
+    if (submitLabel) submitLabel.textContent = 'Envoyer le message';
+  }
+});

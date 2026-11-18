@@ -18,6 +18,7 @@
     <nav aria-label="Navigation principale">
       <a href="#ecosysteme">Écosystème</a>
       <a href="#ecrans">Écrans</a>
+      <a href="#contact">Contact</a>
       <a href="#installation">Installation</a>
       <a class="nav-download" id="nav-download-link" href="#">Télécharger</a>
     </nav>
@@ -215,6 +216,57 @@
         <li><span>2</span><div><strong>Installer</strong><p>Suivez l’assistant et choisissez l’emplacement souhaité.</p></div></li>
         <li><span>3</span><div><strong>Configurer</strong><p>Créez vos catégories puis commencez à enregistrer.</p></div></li>
       </ol>
+    </section>
+
+    <section class="contact-section" id="contact" aria-labelledby="contact-title">
+      <div class="contact-heading">
+        <p class="section-kicker">Nous contacter</p>
+        <h2 id="contact-title">Une question ou un projet?</h2>
+        <p>Échangez avec l’équipe ComptaDesk au sujet d’une installation, d’une structure ou d’une collaboration.</p>
+        <a class="contact-email" href="mailto:zinthezinsou06@gmail.com">zinthezinsou06@gmail.com</a>
+      </div>
+
+      <form class="contact-form" id="contact-form" action="https://formsubmit.co/ajax/zinthezinsou06@gmail.com" method="POST">
+        <input type="hidden" name="_subject" value="Nouveau message depuis ComptaDesk">
+        <input type="hidden" name="_template" value="table">
+        <input type="hidden" name="_captcha" value="true">
+
+        <div class="form-row">
+          <label>
+            <span>Nom</span>
+            <input type="text" name="nom" autocomplete="name" placeholder="Votre nom" required>
+          </label>
+          <label>
+            <span>Email</span>
+            <input type="email" name="email" autocomplete="email" placeholder="vous@exemple.com" required>
+          </label>
+        </div>
+
+        <label>
+          <span>Sujet</span>
+          <select name="sujet" required>
+            <option value="" selected disabled>Choisissez un sujet</option>
+            <option value="Installation">Installation du logiciel</option>
+            <option value="Fonctionnalité">Question sur une fonctionnalité</option>
+            <option value="Structure">Usage pour une structure</option>
+            <option value="Support">Support technique</option>
+            <option value="Collaboration">Collaboration ou partenariat</option>
+          </select>
+        </label>
+
+        <label>
+          <span>Message</span>
+          <textarea name="message" rows="5" placeholder="Décrivez votre besoin..." required></textarea>
+        </label>
+
+        <div class="form-footer">
+          <p id="contact-status" role="status" aria-live="polite"></p>
+          <button class="contact-submit" type="submit">
+            <span>Envoyer le message</span>
+            <span aria-hidden="true">→</span>
+          </button>
+        </div>
+      </form>
     </section>
 
     <section class="final-cta">
