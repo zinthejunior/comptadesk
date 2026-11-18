@@ -3,7 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#173f35">
+  <meta name="theme-color" content="#020617">
+  <link rel="icon" type="image/png" href="favicon.png">
   <meta name="description" content="Téléchargez gratuitement ComptaDesk, une application locale de gestion comptable pour Windows.">
   <title>ComptaDesk — Gestion comptable locale pour Windows</title>
   <link rel="stylesheet" href="styles.css">
@@ -15,7 +16,8 @@
       <span>ComptaDesk</span>
     </a>
     <nav aria-label="Navigation principale">
-      <a href="#fonctionnalites">Fonctionnalités</a>
+      <a href="#ecosysteme">Écosystème</a>
+      <a href="#ecrans">Écrans</a>
       <a href="#installation">Installation</a>
       <a class="nav-download" id="nav-download-link" href="#">Télécharger</a>
     </nav>
@@ -91,6 +93,67 @@
       </div>
     </section>
 
+<section class="ecosystem-section" id="ecosysteme" aria-labelledby="ecosystem-title">
+      <div class="section-heading">
+        <p class="section-kicker">Un écosystème complet</p>
+        <h2 id="ecosystem-title">ComptaDesk accompagne<br>chaque usage.</h2>
+      </div>
+      <div class="ecosystem-grid">
+        <article class="product-card desktop-card">
+          <div class="product-card-head">
+            <span class="product-platform">WINDOWS</span>
+            <span class="product-status">Application locale</span>
+          </div>
+          <div class="product-visual desktop-visual">
+            <img src="assets/desktop/02_tableau_de_bord.png" alt="Tableau de bord de ComptaDesk pour Windows">
+          </div>
+          <h3>ComptaDesk Desktop</h3>
+          <p>Application complète pour Windows: opérations, dons, bilans, rapports, administration et sauvegardes.</p>
+          <a class="text-link" id="ecosystem-download-link" href="#">Télécharger pour Windows <span>↗</span></a>
+        </article>
+
+        <article class="product-card web-card">
+          <div class="product-card-head">
+            <span class="product-platform">NAVIGATEUR</span>
+            <span class="product-status">Comptaflow Web</span>
+          </div>
+          <div class="product-visual web-visual">
+            <img src="assets/web/02_tableau_de_bord.png" alt="Interface web Comptaflow">
+          </div>
+          <h3>Comptaflow Web</h3>
+          <p>Une interface accessible depuis le navigateur, pensée pour consulter et gérer les données avec une expérience moderne.</p>
+          <a class="text-link" href="#ecrans">Découvrir les écrans <span>↗</span></a>
+        </article>
+
+        <article class="product-card mobile-card">
+          <div class="product-card-head">
+            <span class="product-platform">ANDROID / iOS</span>
+            <span class="product-status">Application mobile</span>
+          </div>
+          <div class="product-visual mobile-visual">
+            <div class="phone-frame">
+              <div class="phone-status"><span>09:41</span><span>•••</span></div>
+              <div class="phone-header">
+                <span>CGo</span>
+                <strong>Bonjour</strong>
+              </div>
+              <div class="phone-period"><span>Ce mois</span><span>Général</span></div>
+              <div class="phone-stats">
+                <article><span>Entrées</span><strong>2,85 M</strong></article>
+                <article><span>Sorties</span><strong>1,42 M</strong></article>
+                <article><span>Solde</span><strong>1,43 M</strong></article>
+              </div>
+              <div class="phone-chart"><i></i><i></i><i></i><i></i><i></i></div>
+              <div class="phone-tabs"><span>Accueil</span><span>Modules</span><span>Sync</span></div>
+            </div>
+          </div>
+          <h3>CGo Mobile</h3>
+          <p>Suivi comptable mobile, accès aux modules, synchronisation réseau et sauvegarde locale depuis Android ou iOS.</p>
+          <span class="text-link muted-link">Application mobile CGo</span>
+        </article>
+      </div>
+    </section>
+
     <section class="features-section" id="fonctionnalites" aria-labelledby="features-title">
       <div class="section-heading">
         <p class="section-kicker">Tout ce qu’il faut</p>
@@ -120,6 +183,26 @@
       </div>
     </section>
 
+    <section class="screens-section" id="ecrans" aria-labelledby="screens-title">
+      <div class="section-heading screens-heading">
+        <p class="section-kicker">Captures réelles</p>
+        <h2 id="screens-title">Chaque écran,<br>en contexte.</h2>
+      </div>
+
+      <div class="gallery-tabs" role="tablist" aria-label="Type de présentation">
+        <button class="gallery-tab active" type="button" data-gallery="desktop" role="tab" aria-selected="true">Application Windows</button>
+        <button class="gallery-tab" type="button" data-gallery="web" role="tab" aria-selected="false">Comptaflow Web</button>
+      </div>
+
+      <div class="screen-gallery" id="screen-gallery" aria-live="polite"></div>
+
+      <dialog class="screen-dialog" id="screen-dialog">
+        <button class="dialog-close" type="button" aria-label="Fermer l’aperçu">×</button>
+        <img id="dialog-image" src="" alt="">
+        <div class="dialog-caption"><strong id="dialog-title"></strong><span id="dialog-index"></span></div>
+      </dialog>
+    </section>
+
     <section class="workflow-section">
       <div class="workflow-copy">
         <p class="section-kicker">Simple à démarrer</p>
@@ -147,7 +230,7 @@
 
   <footer class="footer">
     <a class="brand footer-brand" href="#top"><span class="brand-mark" aria-hidden="true"><span></span></span><span>ComptaDesk</span></a>
-    <p>© 2026 Homas ZINSOU</p>
+    <p>© 2026 ComptaDesk</p>
   </footer>
   <script src="download.js"></script>
 </body>
