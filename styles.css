@@ -1,0 +1,54 @@
+:root {
+  --ink: #172033;
+  --muted: #64748b;
+  --paper: #f7f8f5;
+  --panel: #fff;
+  --line: #dfe5df;
+  --green: #1f6d4f;
+  --green-dark: #15523a;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  color: var(--ink);
+  background: var(--paper);
+  font-family: "Trebuchet MS", "Segoe UI", sans-serif;
+}
+
+.hero-copy, .features, .install, footer {
+  width: min(1120px, calc(100% - 40px));
+  margin-inline: auto;
+}
+
+.hero {
+  min-height: 440px;
+  display: grid;
+  align-items: center;
+  border-bottom: 1px solid var(--line);
+  background: linear-gradient(135deg, #eff5ef 0 65%, #cad8cc 65%);
+}
+
+.hero-copy { padding: 72px 0; }
+.eyebrow { color: var(--green); font-size: .82rem; font-weight: 800; text-transform: uppercase; letter-spacing: .12em; }
+h1 { max-width: 720px; margin: 0; font-family: Georgia, serif; font-size: clamp(2.8rem, 7vw, 5.6rem); line-height: .98; }
+.lead { max-width: 650px; margin: 24px 0 30px; color: #445269; font-size: 1.08rem; line-height: 1.7; }
+.actions { display: flex; align-items: center; gap: 16px; flex-wrap: wrap; }
+.download-button { min-height: 52px; display: inline-flex; align-items: center; padding: 0 22px; border-radius: 6px; color: #fff; background: var(--green); font-weight: 800; text-decoration: none; }
+.download-button:hover { background: var(--green-dark); }
+.version, .note { color: var(--muted); }
+.features { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; padding: 36px 0; }
+.features article, .install { border: 1px solid var(--line); border-radius: 8px; background: var(--panel); }
+.features article { min-height: 180px; padding: 24px; }
+.install { margin-bottom: 18px; padding: 26px; }
+.features h2, .install h2 { margin: 0 0 12px; font-size: 1.1rem; }
+.features p, .install p, .install li { color: #536176; line-height: 1.65; }
+footer { min-height: 90px; display: flex; align-items: center; color: var(--muted); border-top: 1px solid var(--line); }
+
+@media (max-width: 760px) {
+  .hero { min-height: auto; }
+  .hero-copy { padding: 54px 0; }
+  h1 { font-size: clamp(2.7rem, 15vw, 4.2rem); }
+  .features { grid-template-columns: 1fr; }
+}
