@@ -3,42 +3,152 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Téléchargez gratuitement ComptaDesk pour Windows.">
-  <title>ComptaDesk - Téléchargement Windows</title>
+  <meta name="theme-color" content="#173f35">
+  <meta name="description" content="Téléchargez gratuitement ComptaDesk, une application locale de gestion comptable pour Windows.">
+  <title>ComptaDesk — Gestion comptable locale pour Windows</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <main>
+  <header class="topbar">
+    <a class="brand" href="#top" aria-label="ComptaDesk accueil">
+      <span class="brand-mark" aria-hidden="true"><span></span></span>
+      <span>ComptaDesk</span>
+    </a>
+    <nav aria-label="Navigation principale">
+      <a href="#fonctionnalites">Fonctionnalités</a>
+      <a href="#installation">Installation</a>
+      <a class="nav-download" id="nav-download-link" href="#">Télécharger</a>
+    </nav>
+  </header>
+
+  <main id="top">
     <section class="hero" aria-labelledby="title">
       <div class="hero-copy">
-        <p class="eyebrow">ComptaDesk · Windows</p>
-        <h1 id="title">Votre comptabilité, simplement organisée.</h1>
-        <p class="lead">Gérez vos opérations, vos bilans, vos rapports et vos sauvegardes depuis une application locale conçue pour un usage quotidien.</p>
-        <div class="actions">
-          <a class="download-button" id="download-link" href="#" role="button">Télécharger gratuitement</a>
-          <span class="version">Version 1.0.3 · Windows 64 bits</span>
+        <p class="eyebrow"><span></span> Application Windows gratuite</p>
+        <h1 id="title">Vos chiffres, enfin en ordre.</h1>
+        <p class="lead">Enregistrez les opérations, suivez les ressources, préparez les bilans et retrouvez chaque donnée depuis une application comptable locale.</p>
+        <div class="hero-actions">
+          <a class="download-button" id="download-link" href="#">
+            <span>Télécharger gratuitement</span>
+            <span class="download-arrow" aria-hidden="true">↓</span>
+          </a>
+          <div class="download-meta">
+            <strong>Version 1.0.3</strong>
+            <span>Windows 10 / 11 · 64 bits</span>
+          </div>
+        </div>
+        <ul class="trust-list" aria-label="Points clés">
+          <li>Installation locale</li>
+          <li>Données sur votre ordinateur</li>
+          <li>Sauvegarde intégrée</li>
+        </ul>
+      </div>
+
+      <div class="product-preview" aria-label="Aperçu de l’application ComptaDesk">
+        <div class="window-bar">
+          <span class="window-dots" aria-hidden="true"><i></i><i></i><i></i></span>
+          <span>ComptaDesk</span>
+        </div>
+        <div class="app-shell">
+          <aside class="app-sidebar">
+            <strong class="app-logo" aria-label="ComptaDesk"><span></span></strong>
+            <span class="side-item active"></span>
+            <span class="side-item"></span>
+            <span class="side-item"></span>
+            <span class="side-item"></span>
+          </aside>
+          <div class="app-content">
+            <div class="app-heading">
+              <div>
+                <span>APERÇU</span>
+                <strong>Tableau de bord</strong>
+              </div>
+              <span class="app-period">Novembre 2026</span>
+            </div>
+            <div class="stat-grid">
+              <article><span>Recettes</span><strong>2 850 000</strong><small>+12,4 %</small></article>
+              <article><span>Dépenses</span><strong>1 420 000</strong><small>-4,8 %</small></article>
+              <article><span>Solde</span><strong>1 430 000</strong><small>Stable</small></article>
+            </div>
+            <div class="app-panels">
+              <article class="chart-panel">
+                <div class="panel-title"><strong>Flux financiers</strong><span>6 derniers mois</span></div>
+                <div class="chart-bars" aria-hidden="true">
+                  <i style="--h:42%"></i><i style="--h:58%"></i><i style="--h:48%"></i><i style="--h:76%"></i><i style="--h:65%"></i><i style="--h:88%"></i>
+                </div>
+              </article>
+              <article class="activity-panel">
+                <div class="panel-title"><strong>Activité</strong><span>Récent</span></div>
+                <ul>
+                  <li><i></i><span><strong>Dons reçus</strong><small>Hier</small></span><b>+125 000</b></li>
+                  <li><i></i><span><strong>Fournitures</strong><small>15 nov.</small></span><b>-48 500</b></li>
+                  <li><i></i><span><strong>Adhésions</strong><small>12 nov.</small></span><b>+75 000</b></li>
+                </ul>
+              </article>
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
-    <section class="features" aria-label="Fonctionnalités">
-      <article><h2>Gestion comptable</h2><p>Opérations, catégories, désignations, dons, bilans et analyses sur des périodes configurables.</p></article>
-      <article><h2>Rapports et données</h2><p>Exports Excel, rapports PDF, import de données et historique des actions.</p></article>
-      <article><h2>Local et contrôlé</h2><p>Base SQLite locale, sauvegardes, rôles et permissions.</p></article>
+    <section class="features-section" id="fonctionnalites" aria-labelledby="features-title">
+      <div class="section-heading">
+        <p class="section-kicker">Tout ce qu’il faut</p>
+        <h2 id="features-title">Une comptabilité claire,<br>sans ajout inutile.</h2>
+      </div>
+      <div class="features">
+        <article>
+          <span class="feature-number">01</span>
+          <h3>Opérations quotidiennes</h3>
+          <p>Enregistrez les entrées et sorties avec catégories, désignations, dates et descriptions.</p>
+        </article>
+        <article>
+          <span class="feature-number">02</span>
+          <h3>Bilans et analyses</h3>
+          <p>Comparez les périodes, les catégories et les désignations pour voir rapidement où vont vos ressources.</p>
+        </article>
+        <article>
+          <span class="feature-number">03</span>
+          <h3>Rapports prêts à partager</h3>
+          <p>Exportez vos données en Excel et produisez des documents PDF pour vos réunions ou archives.</p>
+        </article>
+        <article>
+          <span class="feature-number">04</span>
+          <h3>Contrôle des accès</h3>
+          <p>Organisez les rôles et permissions pour limiter les opérations selon chaque utilisateur.</p>
+        </article>
+      </div>
     </section>
 
-    <section class="install">
-      <h2>Installation</h2>
-      <ol>
-        <li>Téléchargez l’installateur Windows.</li>
-        <li>Ouvrez le fichier et suivez les instructions.</li>
-        <li>À la première utilisation, configurez un mot de passe sûr.</li>
+    <section class="workflow-section">
+      <div class="workflow-copy">
+        <p class="section-kicker">Simple à démarrer</p>
+        <h2>Votre dossier comptable sur ordinateur.</h2>
+        <p>ComptaDesk conserve les données dans une base locale. Vous gardez le contrôle sur les sauvegardes, les utilisateurs autorisés et l’historique des opérations.</p>
+      </div>
+      <ol class="workflow" id="installation">
+        <li><span>1</span><div><strong>Télécharger</strong><p>Obtenez l’installateur Windows officiel.</p></div></li>
+        <li><span>2</span><div><strong>Installer</strong><p>Suivez l’assistant et choisissez l’emplacement souhaité.</p></div></li>
+        <li><span>3</span><div><strong>Configurer</strong><p>Créez vos catégories puis commencez à enregistrer.</p></div></li>
       </ol>
-      <p class="note">Système requis : Windows 10 ou 11, architecture 64 bits.</p>
     </section>
 
-    <footer><p>© 2026 Homas ZINSOU · ComptaDesk</p></footer>
+    <section class="final-cta">
+      <div>
+        <p class="section-kicker">ComptaDesk 1.0.3</p>
+        <h2>Commencez à organiser vos finances.</h2>
+      </div>
+      <a class="download-button light" id="final-download-link" href="#">
+        <span>Télécharger pour Windows</span>
+        <span class="download-arrow" aria-hidden="true">↓</span>
+      </a>
+    </section>
   </main>
+
+  <footer class="footer">
+    <a class="brand footer-brand" href="#top"><span class="brand-mark" aria-hidden="true"><span></span></span><span>ComptaDesk</span></a>
+    <p>© 2026 Homas ZINSOU</p>
+  </footer>
   <script src="download.js"></script>
 </body>
 </html>
